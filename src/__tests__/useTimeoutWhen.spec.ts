@@ -24,6 +24,7 @@ describe('base', () => {
     };
   });
   it('runs immediately after mount', async () => {
+    expect.hasAssertions();
     jest.useFakeTimers();
     const { result } = renderHook(() => useHook());
     act(() => {
